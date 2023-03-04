@@ -180,7 +180,7 @@ def Locate_Changes(initial_file_path):
 
     changes = []
 
-    # Compare the content of each file with the backup file's content
+    # Compare the content of each file with the backup file's content 
 
     # The enumerate function is used to keep track of the number of each line
 
@@ -305,7 +305,7 @@ def Display_Details(file_path):
 
     for alteration in Related_Alteration_Record:
 
-        # Display summary of where the chasnge took place
+        # Display summary of where the chasnges took place
 
         print(Fore.RED + '\n\t>> Change detected in ' + Fore.YELLOW + file_path + ' at : '+alteration['alteration_time']+' by : '+getuser()+'\n' + Style.RESET_ALL)
 
@@ -457,10 +457,14 @@ if __name__ == '__main__':
         if len(argv) == 4:
 
             if argv[1] == '-i' or argv[1] == '-s' or argv[1] == '-u':
+                
+                # Initialize the database with fingerprints of each file and creation of backup files
 
                 if argv[1] == '-i':
 
                     Initialize_Monitoring_Repo(argv[2])
+                    
+                # Update the whole database with the backup files
 
                 elif argv[1] == '-u':
 
@@ -474,9 +478,7 @@ if __name__ == '__main__':
                         exit()
 
                 # Start the  scans
-
                 while True:
-
                     Scan(argv[2])
 
             else:
