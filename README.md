@@ -3,8 +3,8 @@
 # Files-integrity-monitor
 
 
-        This program monitors a directory for changes and keeps a record of the changes in a repository. Which
-    allows to preserve the integrity of system files, and recover the date in case unauthorized modifications have taken place.
+        This program monitors a directory for changes and keeps a record of the changes in a repository. Which\
+    allows to preserve the integrity of system files, and recover the date in case unauthorized modifications \have taken place.
 
 
 
