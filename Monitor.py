@@ -441,9 +441,9 @@ def Display_Help_Page():
 
         Examples of usage:
 
-            >> sudo python  Monitor.py  -i  /path/to/directory  10
+            >> sudo python  Monitor.py  -i  /directory_path  10
 
-            >> sudo python  Monitor.py  -s  /path/to/directory  10
+            >> sudo python  Monitor.py  -s  /directory_path  10
 
     """)
 
@@ -466,10 +466,12 @@ if __name__ == '__main__':
                     
                 # Update the whole database with the backup files
 
-                elif argv[1] == '-u':
+                elif argv[1] == '-u' or argv[1] == '-s':
 
-                    if path.getsize('Monitoring_Repo/Alteration_History.json') > 0 and path.getsize('Monitoring_Repo/checksums.csv') > 0:
-                        Update_Register(argv[2])
+                    if path.isfile('Monitoring_Repo/Alteration_History.json') and path.isfile('Monitoring_Repo/checksums.csv') :
+                        
+                        if argv[1] == '-u':
+                            Update_Register(argv[2])
 
                     else:
 
