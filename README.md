@@ -4,8 +4,8 @@
 # Files-integrity-monitor
 
 
-    This program monitors a directory for changes and keeps a record of the changes in a repository. Which allows to preserve
-    the integrity of system files, and recover the date in case unauthorized modifications have taken place.
+        This program monitors a directory for changes and keeps a record of the changes in a repository. Which
+    allows to preserve the integrity of system files, and recover the date in case unauthorized modifications have taken place.
 
 
 
@@ -40,6 +40,6 @@ sudo python  Monitor.py  -i  /directory_path  10
 
 ## Documentation
 
-[Documentation](https://linktodocumentation)
-
-When running the script for the first time, a new Monitoring Repository folder will be created in the root directory of the project. This folder contains the following files:
+    When running the script for the first time, it will generate new files in the specified root directory holding the fingerprints of each file within this directory along with the traces of any changes  that would occur later on. These files are as follows:
+            * checksums.csv : This file contains the hash values of all files in the specified directory and its subdirectories, along with the date and time of the            last modification.
+            * BackUp_Files_Repo: This folder contains backup copies of all files being monitored, named using the pattern ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 <filename>_bck<extension>
