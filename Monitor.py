@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+
+
+
+
 from os import walk, path, geteuid
 
 from sys import argv,exit
