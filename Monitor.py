@@ -446,6 +446,16 @@ def Display_Help_Page():
             >> sudo python  Monitor.py  -s  /directory_path  10
 
     """)
+    
+def Display_Author():
+    print(r"""
+                 _____                     _    _____   _   _                             _
+                |  ___|__  _   _  __ _  __| |  | ____| | | | |      __   __ _  __ _  __ _| |_   _
+                | |_ / _ \| | | |/ _` |/ _` |  |  _|   | | | '_ \ / _` |/ _` |/ _` |/ _` | | | | |
+                |  _| (_) | |_| | (_| | (_| |  | |___  | | | |_) | (_| | (_| | (_| | (_| | | |_| |
+                |_|  \___/ \__,_|\__,_|\__,_|  |_____| |_| |_.__/ \__,_|\__, |\__, |\__,_|_|\__, |
+                                                                           |_|   |_|        |___/
+    """)
 
 
 if __name__ == '__main__':
@@ -461,6 +471,8 @@ if __name__ == '__main__':
                 # Initialize the database with fingerprints of each file and creation of backup files
 
                 if argv[1] == '-i':
+                    
+                    Display_Author()
 
                     Initialize_Monitoring_Repo(argv[2])
                     
@@ -471,6 +483,9 @@ if __name__ == '__main__':
                     if path.isfile('Monitoring_Repo/Alteration_History.json') and path.isfile('Monitoring_Repo/checksums.csv') :
                         
                         if argv[1] == '-u':
+                            
+                            Display_Author()
+                            
                             Update_Register(argv[2])
 
                     else:
