@@ -42,4 +42,5 @@ sudo python  Monitor.py  -i  /directory_path  10
 
     When running the script for the first time, it will generate new files in the specified root directory holding the fingerprints of each file within this directory along with the traces of any changes  that would occur later on. These files are as follows:
             * checksums.csv : This file contains the hash values of all files in the specified directory and its subdirectories, along with the date and time of the            last modification.
-            * BackUp_Files_Repo: This folder contains backup copies of all files being monitored, named using the pattern <p style="color:blue"><filename>_bck<extension></p> 
+            * BackUp_Files_Repo: This folder contains backup copies of all files being monitored, named using the pattern <filename>_bck<extension>
+            * Alteration_History.json: This file contains the history of all changes made to the files being monitored.
