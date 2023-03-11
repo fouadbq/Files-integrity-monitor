@@ -25,7 +25,6 @@ pip install -r requirements.txt
 
  Navigate to the directory you want to monitor.
 
-
 ```bash
 cd /directory_path
 ```
